@@ -73,6 +73,8 @@ extern "C" {
 
 hagl_backend_t *hagl_init(void);
 size_t hagl_flush(hagl_backend_t *backend);
+void hagl_begin(hagl_backend_t *backend);
+void hagl_end(hagl_backend_t *backend);
 void hagl_close(hagl_backend_t *backend);
 
 void hagl_clear(void *surface);
