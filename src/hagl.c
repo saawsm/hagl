@@ -85,6 +85,22 @@ hagl_flush(hagl_backend_t *backend)
 };
 
 void
+hagl_begin(hagl_backend_t *backend)
+{
+    if (backend->begin) {
+        backend->begin(backend);
+    }
+};
+
+void
+hagl_end(hagl_backend_t *backend)
+{
+    if (backend->end) {
+        backend->end(backend);
+    }
+};
+
+void
 hagl_close(hagl_backend_t *backend)
 {
     if (backend->close) {

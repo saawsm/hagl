@@ -61,6 +61,8 @@ typedef struct {
 
     /* Specific to backend. */
     size_t (*flush)(void *self);
+    void (*begin)(void *self);
+    void (*end)(void *self);
     void (*close)(void *self);
     uint8_t *buffer;
     uint8_t *buffer2;
